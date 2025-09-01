@@ -1,0 +1,182 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+body {
+    background-color: #ECFAE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    transition: preserve-3d;
+    transition: transform 0.8s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.card .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #fff;
+    border-radius: 20px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+    z-index: 5;
+}
+
+.card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: radial-gradient(#fff784, #fff);
+    border: 1px solid #00ff80;
+    font-weight: bold;
+    border-radius: 20px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 10;
+}
+
+.s1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.card.flipped .back {
+    opacity: 1;
+}
+
+.back h3 {
+    position: absolute;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+h2 {
+    position: absolute;
+    top: 19%;
+    left: 25%;
+    font-size: 40px;
+}
+
+p {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    font-size: 25px;
+    text-align: center;
+}
+
+button.b2 {
+    position: absolute;
+    top: 85%;
+    left: 43%;
+    padding: 12px 24px;
+    background-color: yellow;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+.front button {
+    position: absolute;
+    top: 80%;
+    left: 23%;
+    padding: 12px 24px;
+    background-color: greenyellow;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color: rgb(217, 255, 0);
+        color: #000;
+    }
+}
+
+.back button {
+    position: absolute;
+    top: 80%;
+    left: 23%;
+    padding: 12px 24px;
+    background-color: greenyellow;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color: rgba(0, 255, 221, 0.986);
+        color: #000;
+    }
+}
+
+@media (min-width: 344px) {
+    .container {
+        padding-bottom: 250px;
+    }
+    .card-container {
+        margin-top: 5%;
+        margin-left: -25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button.b2 {
+        margin-top: -235%;
+        margin-left: -15%;
+    }
+}
+
+.card-container {
+    perspective: 1500px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    margin-bottom: 200px;
+    gap: 20px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="./openimage.jpg">
+    <title>🍀Lucky Card🍀</title>
+</head>
+<style>
+
+    body {
+        background: #ECFAE5;
+    }
+
+    button {
+        position: absolute;
+        top: 80%;
+        left: 13%;
+        padding: 12px 24px;
+        background-color: greenyellow;
+        color: #000;
+        border: none;
+        font-weight: bold;
+        border-radius: 50px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+        transition: background-color 0.1s ease;
+        &:hover{
+            background-color: rgb(217, 255, 0);
+            color: #000;
+        } 
+    }
+
+    h1, h2 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .container {
+        position: relative;
+        margin-top: 15%;
+        left: 40%;
+        width: 250px;
+        height: 400px;
+        background: #fff;
+        transform-style: preserve-3d;
+        transition: transform 0.8s ease;
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+    }
+
+    @media (min-width: 344px) {
+        .container {
+            margin: 150px 100px 0 -90px;
+        }
+    }
+</style>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <h1>🍀</h1>
+                <h2>행운<br>카드</h2>
+                <a href="./index02.html">
+                    <button> 여기를 눌러주세요 ⬅️</button>
+                </a>               
+            </div>
+        </div>
+    </div>
+</body>
+</html>
